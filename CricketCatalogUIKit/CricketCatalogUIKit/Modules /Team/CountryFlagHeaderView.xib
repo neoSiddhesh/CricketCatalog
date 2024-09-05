@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" restorationIdentifier="CountryFlagHeaderView" id="iN0-l3-epB" customClass="CountryFlagHeaderView" customModule="CricketCatalogUIKit" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="211"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="004-tE-H8d">
+                    <rect key="frame" x="0.0" y="59" width="393" height="152"/>
+                    <subviews>
+                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="ef5-MA-sK8">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="117"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="1XI-cb-2cr">
+                                <size key="itemSize" width="128" height="128"/>
+                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </collectionViewFlowLayout>
+                        </collectionView>
+                        <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="OhD-OK-ius">
+                            <rect key="frame" x="138.66666666666666" y="121" width="116" height="26"/>
+                            <color key="pageIndicatorTintColor" systemColor="systemGray2Color"/>
+                            <color key="currentPageIndicatorTintColor" systemColor="tintColor"/>
+                        </pageControl>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="ef5-MA-sK8" firstAttribute="leading" secondItem="004-tE-H8d" secondAttribute="leading" id="8b3-Hj-v8a"/>
+                        <constraint firstItem="OhD-OK-ius" firstAttribute="top" secondItem="ef5-MA-sK8" secondAttribute="bottom" constant="4" id="8k5-Wl-4tT"/>
+                        <constraint firstAttribute="bottom" secondItem="OhD-OK-ius" secondAttribute="bottom" constant="5" id="Lhb-7e-FXv"/>
+                        <constraint firstAttribute="trailing" secondItem="ef5-MA-sK8" secondAttribute="trailing" id="VtH-8u-EjF"/>
+                        <constraint firstItem="OhD-OK-ius" firstAttribute="centerX" secondItem="ef5-MA-sK8" secondAttribute="centerX" id="qBu-Wm-1WA"/>
+                        <constraint firstItem="ef5-MA-sK8" firstAttribute="top" secondItem="004-tE-H8d" secondAttribute="top" id="uoi-ue-enJ"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="004-tE-H8d" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="TMd-kz-yZj"/>
+                <constraint firstItem="004-tE-H8d" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="YkU-RA-npd"/>
+                <constraint firstAttribute="bottom" secondItem="004-tE-H8d" secondAttribute="bottom" id="bhp-30-WC0"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="004-tE-H8d" secondAttribute="trailing" id="dLl-pK-OGh"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="flagCollectionView" destination="ef5-MA-sK8" id="2mo-BY-sUb"/>
+                <outlet property="pageControl" destination="OhD-OK-ius" id="fFT-be-uJT"/>
+            </connections>
+            <point key="canvasLocation" x="-54" y="20"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

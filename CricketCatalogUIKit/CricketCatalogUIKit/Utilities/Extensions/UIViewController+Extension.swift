@@ -1,0 +1,20 @@
+//
+//  UIViewController+Extension.swift
+//  CricketCatalogUIKit
+//
+//  Created by Siddhesh Jadhav on 04/09/24.
+//
+
+import UIKit
+
+extension UIViewController {
+    func presentBottomSheet(height: CGFloat, viewController: UIViewController) {
+        let nav = UINavigationController(rootViewController: viewController)
+        nav.modalPresentationStyle = .pageSheet
+        if #available(iOS 15.0, *), let sheet = nav.sheetPresentationController {
+            sheet.detents = [.custom(resolver: { _ in height })]
+            sheet.preferredCornerRadius = 24
+        }
+        present(nav, animated: true, completion: nil)
+    }
+}
